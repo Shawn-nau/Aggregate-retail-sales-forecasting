@@ -37,6 +37,7 @@ This repository provides the complete experimental pipeline for cross-level reta
 │   └── {10,30,50,100}pct*/       # Experiment outputs per sample fraction
 │       ├── 05_stat_tests/        # Statistical test outputs (CSV + PNG)
 │       └── 06_paper_tables/      # Final LaTeX tables and summary CSVs
+├── requirements.txt              # Python dependencies with version pins
 ├── best_params_all_models.json   # Tuned hyperparameters for all models
 ├── CLAUDE.md                     # Detailed command reference for Claude Code
 └── README.md                     # This file
@@ -47,13 +48,15 @@ This repository provides the complete experimental pipeline for cross-level reta
 ### 1. Environment
 
 ```bash
-# Python 3.10+ required
-pip install numpy pandas scipy scikit-learn optuna lightgbm matplotlib torch
+# Python 3.10+ required (tested on 3.11 and 3.13)
+pip install -r requirements.txt
 
-# Set environment variables
+# Set environment variables (Linux/macOS)
 export PYTHONUNBUFFERED=1
 export OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 NUMEXPR_NUM_THREADS=1
 ```
+
+On Windows, replace `export` with `set` and set each variable on a separate line.
 
 ### 2. Data
 
@@ -178,6 +181,10 @@ python scripts/check_experiment_consistency.py \
   --work-dir "$WORK_DIR/100pct" --mode holdout --metric wspl
 ```
 
+### A note on shell scripts
+
+The `scripts/run_*.sh` files contain hardcoded paths from the original AutoDL cloud execution environment (`/root/autodl-tmp/m5`). They are preserved as a record of the exact experimental workflow. **To reproduce the experiments, use the Python commands documented above** — these are the authoritative reproduction instructions. If you adapt the shell scripts for your own environment, update the paths in the variables at the top of each script.
+
 ## Models
 
 ### Proposed models (neural, GPU)
@@ -209,6 +216,21 @@ python scripts/check_experiment_consistency.py \
 - **WSPL** (Weighted Scaled Pinball Loss): M5 probabilistic forecasting metric over 9 quantiles (0.005, 0.025, 0.165, 0.25, 0.5, 0.75, 0.835, 0.975, 0.995). Lower is better.
 - **Friedman test + Nemenyi post-hoc**: Non-parametric statistical comparison of model ranks across 121 aggregate series. CD diagrams use α = 0.10.
 
+## Results
+
+All final experiment outputs are in `results/work/`:
+
+| Directory | Description |
+|-----------|-------------|
+| `results/work/v-3.tex` | Full paper source (LaTeX) |
+| `results/work/references.bib` | Bibliography |
+| `results/work/figures/` | CD diagrams (PNG) for point and quantile metrics |
+| `results/work/{10,30,50,100}pct/05_stat_tests/` | Friedman/Nemenyi test outputs per sample fraction |
+| `results/work/{10,30,50,100}pct/06_paper_tables/` | Final LaTeX tables (Tables 2-5) and summary CSVs |
+| `results/work/100pct_rolling/` | Rolling-origin evaluation at 100% SKU sample |
+
+Raw intermediate outputs (sanity checks, tuning results, per-model predictions) are excluded from version control due to size. They can be regenerated using the pipeline commands above.
+
 ## Key results (100% sample, holdout)
 
 ### Point forecasting (WRMSSE)
@@ -237,7 +259,37 @@ Neural models were trained on an NVIDIA RTX 4090 (24 GB). Per-epoch training tim
 | DeepSets | 25.5s | 20.7s | 29.0s | 25.1s |
 | Set Transformer | 38.5s | 38.7s | 46.8s | 41.4s |
 
-Estimated total GPU-hours for full reproduction: ~200–300 hours (including hyperparameter tuning across all sample fractions).
+Estimated total GPU-hours for full reproduction: ~200--300 hours (including hyperparameter tuning across all sample fractions).
+
+## Reproducing the paper
+
+The paper source is `results/work/v-3.tex` with bibliography in `results/work/references.bib`. To compile:
+
+1. Ensure a LaTeX distribution (TeX Live 2024+) is installed
+2. The paper `\input{}`s generated table files from `results/work/100pct/06_paper_tables/` and includes CD diagrams from `results/work/figures/`
+3. Compile with `latexmk -pdf -interaction=nonstopmode v-3.tex` from the `results/work/` directory
+
+Generated LaTeX tables (Table 2--5) are tracked for each sample fraction. To regenerate them, follow the full reproduction pipeline above.
+
+## Troubleshooting
+
+**"M5 data files not found"**
+Ensure the four M5 CSV files (`sales_train_evaluation.csv`, `sales_train_validation.csv`, `calendar.csv`, `sell_prices.csv`) are in your `--data-dir`. Download them from [Kaggle](https://www.kaggle.com/c/m5-forecasting-accuracy/data).
+
+**"CUDA out of memory"**
+Reduce batch size, reduce `--store-sku-sample-frac`, or use fewer training origins. For tuning, the OOM handler automatically reduces batch size on retry.
+
+**"Optuna database locked"**
+Delete stale `optuna*.db` files and retry. Each tuning run should use a fresh `--storage` path.
+
+**"Shell scripts fail"**
+The shell scripts contain hardcoded AutoDL cloud paths. Use the Python commands from this README instead, or update the path variables at the top of each script.
+
+**"No module named threadpoolctl"**
+Install it with `pip install threadpoolctl`. This is a dependency of the benchmark models and is included in `requirements.txt`.
+
+**Slow training on CPU**
+Neural models default to GPU if available. On CPU-only machines, training will be 10--50x slower. Consider using a smaller `--store-sku-sample-frac` (e.g., 0.05) for testing.
 
 ## Citation
 
