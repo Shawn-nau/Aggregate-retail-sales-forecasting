@@ -1,10 +1,10 @@
-# Large data files — users provide their own M5 dataset
+# --- Data files (users provide their own) ---
 data/
 
-# Cached preprocessed data — rebuild with warm_m5_cache.py
+# --- Preprocessing cache (rebuild with warm_m5_cache.py) ---
 cache/
 
-# Raw intermediate experiment outputs (large)
+# --- Raw intermediate experiment outputs (large, rebuildable) ---
 results/work/*/00_sanity/
 results/work/*/01_tuning/
 results/work/*/02_ablation/
@@ -19,21 +19,32 @@ results/work/100pct_rolling/02_ablation/
 results/work/100pct_rolling/03_benchmark_baselines/
 results/work/100pct_rolling/04_benchmark_proposed/
 
-# Logs and archives
+# --- Logs and archives ---
 results/work/*/run_all.log
 results/work/100pct_rolling/run_all.log
 results/work/work.zip
+*.tar.gz
 
-# SSH keys — NEVER commit
+# --- Optuna tuning databases ---
+optuna*.db
+
+# --- Duplicate result and experiment directories ---
+results/holdout/
+results/rolling/
+results/work/10pct_rolling/
+robustness_5seeds/
+
+# --- SSH keys (safety) ---
+ssh_public_key.txt
 m5_experiment_ssh.text
 m5_experiment_ssh.text.pub
 
-# Python
+# --- Python bytecode ---
 __pycache__/
 *.pyc
 *.pyo
 
-# Temporary LaTeX files
+# --- LaTeX auxiliary files ---
 appendix_*.tex
 summary_*.tex
 *.aux
@@ -45,23 +56,16 @@ summary_*.tex
 *.fdb_latexmk
 *.fls
 
-# Claude Code
+# --- Claude Code configuration ---
 .claude/
 
-# Duplicate scripts
+# --- Duplicate scripts ---
 scripts_large_sample_tuning/
 scripts_large_sample_tuning.zip
 
-# Output logs
+# --- Output logs ---
 outputs/
 
-# OS files
+# --- OS files ---
 .DS_Store
 Thumbs.db
-results/holdout/
-results/rolling/
-results/work/10pct_rolling/
-robustness_5seeds/
-*.tar.gz
-optuna*.db
-results/work/10pct_rolling/
