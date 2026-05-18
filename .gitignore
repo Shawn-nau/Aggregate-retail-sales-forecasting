@@ -55,8 +55,6 @@ summary_*.tex
 *.synctex.gz
 *.fdb_latexmk
 *.fls
-
-# --- Claude Code configuration ---
 .claude/
 
 # --- Duplicate scripts ---

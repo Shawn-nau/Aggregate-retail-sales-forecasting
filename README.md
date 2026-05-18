@@ -37,7 +37,7 @@ This repository provides the complete experimental pipeline for cross-level reta
 │       └── 06_paper_tables/      # Final LaTeX tables and summary CSVs
 ├── requirements.txt              # Python dependencies with version pins
 ├── best_params_all_models.json   # Tuned hyperparameters for all models
-├── CLAUDE.md                     # Detailed command reference for Claude Code
+
 └── README.md                     # This file
 ```
 
