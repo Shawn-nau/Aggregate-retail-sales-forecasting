@@ -69,3 +69,7 @@ outputs/
 # --- OS files ---
 .DS_Store
 Thumbs.db
+
+# --- Unpublished paper source (not yet public) ---
+results/work/v-3.tex
+results/work/references.bib

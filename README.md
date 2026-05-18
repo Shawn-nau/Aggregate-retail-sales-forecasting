@@ -31,8 +31,6 @@ This repository provides the complete experimental pipeline for cross-level reta
 │   ├── check_experiment_consistency.py # Post-run consistency checker
 │   └── run_*.sh                       # Shell scripts for batch runs
 ├── results/work/
-│   ├── v-3.tex                   # Paper source (LaTeX)
-│   ├── references.bib            # Bibliography
 │   ├── figures/                  # CD diagrams and other figures
 │   └── {10,30,50,100}pct*/       # Experiment outputs per sample fraction
 │       ├── 05_stat_tests/        # Statistical test outputs (CSV + PNG)
@@ -222,8 +220,6 @@ All final experiment outputs are in `results/work/`:
 
 | Directory | Description |
 |-----------|-------------|
-| `results/work/v-3.tex` | Full paper source (LaTeX) |
-| `results/work/references.bib` | Bibliography |
 | `results/work/figures/` | CD diagrams (PNG) for point and quantile metrics |
 | `results/work/{10,30,50,100}pct/05_stat_tests/` | Friedman/Nemenyi test outputs per sample fraction |
 | `results/work/{10,30,50,100}pct/06_paper_tables/` | Final LaTeX tables (Tables 2-5) and summary CSVs |
@@ -260,16 +256,6 @@ Neural models were trained on an NVIDIA RTX 4090 (24 GB). Per-epoch training tim
 | Set Transformer | 38.5s | 38.7s | 46.8s | 41.4s |
 
 Estimated total GPU-hours for full reproduction: ~200--300 hours (including hyperparameter tuning across all sample fractions).
-
-## Reproducing the paper
-
-The paper source is `results/work/v-3.tex` with bibliography in `results/work/references.bib`. To compile:
-
-1. Ensure a LaTeX distribution (TeX Live 2024+) is installed
-2. The paper `\input{}`s generated table files from `results/work/100pct/06_paper_tables/` and includes CD diagrams from `results/work/figures/`
-3. Compile with `latexmk -pdf -interaction=nonstopmode v-3.tex` from the `results/work/` directory
-
-Generated LaTeX tables (Table 2--5) are tracked for each sample fraction. To regenerate them, follow the full reproduction pipeline above.
 
 ## Troubleshooting
 
