@@ -1,0 +1,67 @@
+# Large data files — users provide their own M5 dataset
+data/
+
+# Cached preprocessed data — rebuild with warm_m5_cache.py
+cache/
+
+# Raw intermediate experiment outputs (large)
+results/work/*/00_sanity/
+results/work/*/01_tuning/
+results/work/*/02_ablation/
+results/work/*/03_benchmark_baselines/
+results/work/*/04_benchmark_proposed/
+results/work/sanity_debug/
+
+# Rolling intermediate outputs
+results/work/100pct_rolling/00_sanity/
+results/work/100pct_rolling/01_tuning/
+results/work/100pct_rolling/02_ablation/
+results/work/100pct_rolling/03_benchmark_baselines/
+results/work/100pct_rolling/04_benchmark_proposed/
+
+# Logs and archives
+results/work/*/run_all.log
+results/work/100pct_rolling/run_all.log
+results/work/work.zip
+
+# SSH keys — NEVER commit
+m5_experiment_ssh.text
+m5_experiment_ssh.text.pub
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Temporary LaTeX files
+appendix_*.tex
+summary_*.tex
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# Claude Code
+.claude/
+
+# Duplicate scripts
+scripts_large_sample_tuning/
+scripts_large_sample_tuning.zip
+
+# Output logs
+outputs/
+
+# OS files
+.DS_Store
+Thumbs.db
+results/holdout/
+results/rolling/
+results/work/10pct_rolling/
+robustness_5seeds/
+*.tar.gz
+optuna*.db
+results/work/10pct_rolling/

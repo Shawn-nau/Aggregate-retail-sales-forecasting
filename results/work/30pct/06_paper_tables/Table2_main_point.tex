@@ -1,0 +1,25 @@
+\begin{table}[H]
+\centering
+\caption{Point forecasting results across aggregate levels.}
+\label{tab:main_point}
+\begin{threeparttable}
+\begin{tabular}{lcccc}
+\toprule
+Model & state\_dept & store\_cat & store\_dept & Mean \\
+\midrule
+SetTransformer & \underline{0.6972} & \textbf{0.7078} & \textbf{0.7767} & \textbf{0.7272} \\
+M3\_FullSkuTemporalCNN & \textbf{0.6890} & \underline{0.7381} & \underline{0.7977} & \underline{0.7416} \\
+ChildSummaryHistGB & 0.7886 & 0.7394 & 0.8054 & 0.7778 \\
+BottomUpGlobalHistGB & 0.7593 & 0.7765 & 0.8347 & 0.7902 \\
+DeepSets & 0.8059 & 0.7545 & 0.8253 & 0.7952 \\
+AggregateHistGB & 0.8164 & 0.7765 & 0.8185 & 0.8038 \\
+AggregateElasticNet & 0.9379 & 0.9155 & 0.9194 & 0.9243 \\
+SeasonalNaive & 0.9122 & 0.9130 & 0.9815 & 0.9356 \\
+ChildSummaryElasticNet & 1.0406 & 0.9965 & 0.9792 & 1.0054 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\footnotesize \item Entries report WRMSSE. Lower values indicate better performance. Best results are shown in bold and second-best results are underlined.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

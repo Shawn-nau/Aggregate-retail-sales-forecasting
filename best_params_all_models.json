@@ -1,0 +1,86 @@
+{
+  "M3_FullSkuTemporalCNN": {
+    "batch_size": 16,
+    "cnn_kernel_size": 5,
+    "cnn_num_blocks": 2,
+    "dropout": 0.05698379063548542,
+    "epochs": 32,
+    "hidden_dim": 96,
+    "lag_windows": [
+      7,
+      14,
+      28,
+      56
+    ],
+    "lr": 0.0006358398347237379,
+    "model_name": "SkuTemporalCNN",
+    "patience": 8,
+    "recent_window": 14,
+    "stage1_objective": 0.9143965432462978,
+    "stage2_objective": 0.8835587022480197,
+    "stat_windows": [
+      7,
+      28,
+      56
+    ],
+    "trial_number": 8,
+    "use_permreg": false,
+    "weight_decay": 0.000161360531728048
+  },
+  "DeepSets": {
+    "batch_size": 16,
+    "cnn_kernel_size": 3,
+    "cnn_num_blocks": 3,
+    "dropout": 0.024902317736738677,
+    "epochs": 32,
+    "hidden_dim": 96,
+    "lag_windows": [
+      7,
+      14,
+      28,
+      56
+    ],
+    "lr": 0.0002553188685209476,
+    "model_name": "DeepSets",
+    "patience": 8,
+    "recent_window": 14,
+    "stage1_objective": 0.922050810400047,
+    "stage2_objective": 0.8815324706269551,
+    "stat_windows": [
+      7,
+      28,
+      56
+    ],
+    "trial_number": 21,
+    "use_permreg": false,
+    "weight_decay": 1.3175842347411643e-06
+  },
+  "SetTransformer": {
+    "batch_size": 16,
+    "cnn_kernel_size": 3,
+    "cnn_num_blocks": 3,
+    "dropout": 0.04601010444780344,
+    "epochs": 32,
+    "hidden_dim": 128,
+    "lag_windows": [
+      7,
+      14,
+      28,
+      56
+    ],
+    "lr": 0.0003124335252569696,
+    "model_name": "SetTransformer",
+    "patience": 8,
+    "recent_window": 14,
+    "stage1_objective": 0.9290473232584255,
+    "stage2_objective": 0.8798915177234906,
+    "stat_windows": [
+      7,
+      28,
+      56
+    ],
+    "trial_number": 72,
+    "use_permreg": false,
+    "weight_decay": 4.026995262102029e-06
+  }
+}

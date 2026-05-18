@@ -1,0 +1,27 @@
+\begin{table}[H]
+\centering
+\caption{Relative performance comparison by MEAN_SPL using the Friedman test with post-hoc Nemenyi analysis.}
+\label{tab:stats_mean_spl}
+\begin{threeparttable}
+\begin{tabular}{lccccc}
+\toprule
+Model & Mean MEAN_SPL & Std. & Avg. rank & Sig. wins & Sig. losses \\
+\midrule
+SetTransformer\_Q & 0.2084 & 0.0504 & 2.777 & 7 & 0 \\
+DeepSets\_Q & 0.2121 & 0.0504 & 3.496 & 6 & 0 \\
+M1\_AggHistFutureSummary & 0.2136 & 0.0465 & 3.719 & 6 & 0 \\
+M3\_FullSkuTemporalCNN\_Q & 0.2196 & 0.0639 & 3.793 & 6 & 0 \\
+M0\_AggHistOnly & 0.2168 & 0.0511 & 4.149 & 6 & 1 \\
+BottomUpGlobalHistGB & 0.2655 & 0.1262 & 6.562 & 3 & 5 \\
+AggregateHistGB & 0.2600 & 0.0897 & 7.132 & 2 & 5 \\
+ChildSummaryHistGB & 0.2592 & 0.0861 & 7.207 & 2 & 5 \\
+AggregateElasticNet & 0.3572 & 0.2555 & 8.298 & 1 & 6 \\
+ChildSummaryElasticNet & 0.3809 & 0.2835 & 9.256 & 0 & 8 \\
+SeasonalNaive & 0.3427 & 0.1682 & 9.612 & 0 & 9 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\footnotesize \item The Friedman test uses 121 aligned series-level blocks (task,agg\_id). The test statistic is $\chi^2=683.5071$ with $p=2.178e-140$. Average ranks are computed with lower MEAN_SPL indicating better performance. Nemenyi significant wins/losses are counted at $\alpha=0.10$ using critical difference $CD=1.2697$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
