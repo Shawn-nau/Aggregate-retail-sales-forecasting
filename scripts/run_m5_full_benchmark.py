@@ -97,6 +97,14 @@ def main(args: argparse.Namespace) -> None:
     print("Building benchmark suite...")
     suite = build_benchmark_suite(random_state=args.random_state)
 
+    model_filter = [m.strip() for m in (args.models or "").split(",") if m.strip()]
+    if model_filter:
+        unknown = [m for m in model_filter if m not in suite]
+        if unknown:
+            raise ValueError(f"Unknown benchmark model(s): {unknown}. Available: {sorted(suite)}")
+        suite = {m: suite[m] for m in model_filter}
+        print(f"Running selected benchmark models: {model_filter}")
+
     all_rows: List[pd.DataFrame] = []
     all_series_rows: List[pd.DataFrame] = []
 
@@ -167,6 +175,7 @@ if __name__ == "__main__":
     parser.add_argument("--output-dir", type=str, default="./m5_outputs", help="Directory to save CSV outputs.")
     parser.add_argument("--mode", type=str, default="rolling", choices=["rolling", "holdout"], help="Evaluation mode.")
     parser.add_argument("--tasks", type=str, default="store_dept,store_cat,state_dept", help="Comma-separated task names.")
+    parser.add_argument("--models", type=str, default="", help="Comma-separated benchmark model names to run. Empty string runs the full suite.")
     parser.add_argument("--quantiles", type=str, default="0.005,0.025,0.165,0.25,0.5,0.75,0.835,0.975,0.995", help="Comma-separated quantile levels. Pass empty string to skip quantile benchmarks.")
     parser.add_argument("--t-hist", type=int, default=364)
     parser.add_argument("--horizon", type=int, default=28)

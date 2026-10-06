@@ -1,16 +1,4 @@
 #!/bin/bash
-# =============================================================================
-# run_50pct_full.sh — 50% SKU sample, holdout evaluation (warm-start from 30%)
-#
-# NOTE: The paths below are from the original AutoDL cloud execution
-# environment (/root/autodl-tmp/m5). To run on your own machine:
-#   1. Replace /root/autodl-tmp/m5 with your repo root path
-#   2. Replace /root/miniconda3/bin/python with your Python interpreter
-#   3. Comment out or adjust the conda activate lines for your setup
-#
-# The equivalent Python commands are documented in README.md — those serve as
-# the authoritative reproduction instructions.
-# =============================================================================
 set -e
 cd /root/autodl-tmp/m5
 export PYTHONUNBUFFERED=1

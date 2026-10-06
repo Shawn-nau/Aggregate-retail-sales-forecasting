@@ -7,15 +7,17 @@
 \toprule
 Model & state\_dept & store\_cat & store\_dept & Mean \\
 \midrule
-SetTransformer\_Q & \textbf{0.1686} & 0.1907 & \underline{0.1949} & \textbf{0.1847} \\
-DeepSets\_Q & \underline{0.1761} & \underline{0.1869} & 0.2022 & \underline{0.1884} \\
-M3\_FullSkuTemporalCNN\_Q & 0.1858 & \textbf{0.1857} & \textbf{0.1944} & 0.1886 \\
-BottomUpGlobalHistGB & 0.2081 & 0.2169 & 0.2406 & 0.2219 \\
-AggregateElasticNet & 0.2526 & 0.2538 & 0.2630 & 0.2565 \\
-AggregateHistGB & 0.2759 & 0.2545 & 0.2768 & 0.2691 \\
-ChildSummaryHistGB & 0.2713 & 0.2660 & 0.2847 & 0.2740 \\
-SeasonalNaive & 0.2677 & 0.2660 & 0.2906 & 0.2748 \\
-ChildSummaryElasticNet & 0.2829 & 0.3255 & 0.2781 & 0.2955 \\
+Set Transformer & \textbf{0.1686} & 0.1907 & \underline{0.1949} & \textbf{0.1847} \\
+DeepSets & \underline{0.1761} & 0.1869 & 0.2022 & \underline{0.1884} \\
+Gated Pooling & 0.1858 & \underline{0.1857} & \textbf{0.1944} & 0.1886 \\
+Child-summary NN & 0.2049 & 0.1928 & 0.2120 & 0.2032 \\
+AggHistOnly NN & 0.2040 & \textbf{0.1836} & 0.2094 & 0.1990 \\
+Bottom-up Global HGB & 0.2081 & 0.2169 & 0.2406 & 0.2219 \\
+Aggregate Elastic Net & 0.2526 & 0.2538 & 0.2630 & 0.2565 \\
+Child-summary Elastic Net & 0.2829 & 0.3255 & 0.2781 & 0.2955 \\
+Aggregate HGB & 0.2759 & 0.2545 & 0.2768 & 0.2691 \\
+Child-summary HGB & 0.2713 & 0.2660 & 0.2847 & 0.2740 \\
+Aggregate Seasonal Naive & 0.2677 & 0.2660 & 0.2906 & 0.2748 \\
 \bottomrule
 \end{tabular}
 \begin{tablenotes}

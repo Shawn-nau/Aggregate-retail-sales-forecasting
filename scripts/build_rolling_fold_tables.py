@@ -19,20 +19,21 @@ PAPER_NAMES = {
     "DeepSets_Q": "DeepSets",
     "M3_FullSkuTemporalCNN": "Gated Pooling",
     "M3_FullSkuTemporalCNN_Q": "Gated Pooling",
-    "M0_AggHistOnly": "AggHistOnly",
-    "M1_AggHistFutureSummary": "AggHist Child-summary",
-    "BottomUpGlobalHistGB": "Bottom-up Global HistGB",
-    "AggregateHistGB": "Aggregate HistGB",
+    "M0_AggHistOnly": "AggHistOnly NN",
+    "M1_AggHistFutureSummary": "Child-summary NN",
+    "BottomUpGlobalHistGB": "Bottom-up Global HGB",
+    "AggregateHistGB": "Aggregate HGB",
     "AggregateElasticNet": "Aggregate Elastic Net",
-    "ChildSummaryHistGB": "Child-summary HistGB",
+    "ChildSummaryHistGB": "Child-summary HGB",
     "ChildSummaryElasticNet": "Child-summary Elastic Net",
-    "SeasonalNaive": "Seasonal Naive",
+    "SeasonalNaive": "Aggregate Seasonal Naive",
+    "Reconcilation": "Reconciled HGB",
 }
 
 MODEL_ORDER_POINT = [
     "SetTransformer", "DeepSets", "M3_FullSkuTemporalCNN",
     "BottomUpGlobalHistGB", "M0_AggHistOnly", "M1_AggHistFutureSummary",
-    "ChildSummaryHistGB", "AggregateHistGB",
+    "ChildSummaryHistGB", "AggregateHistGB", "Reconcilation",
     "SeasonalNaive", "AggregateElasticNet", "ChildSummaryElasticNet",
 ]
 MODEL_ORDER_QUANTILE = [

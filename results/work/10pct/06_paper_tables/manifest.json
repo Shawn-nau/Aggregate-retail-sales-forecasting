@@ -1,9 +1,9 @@
 {
-  "combined_rows":"\/root\/autodl-tmp\/m5\/work\/holdout\/06_paper_tables\/combined_rows.csv",
-  "Table2_main_point_csv":"\/root\/autodl-tmp\/m5\/work\/holdout\/06_paper_tables\/Table2_main_point.csv",
-  "Table2_main_point_tex":"\/root\/autodl-tmp\/m5\/work\/holdout\/06_paper_tables\/Table2_main_point.tex",
-  "Table3_main_quantile_tex":"\/root\/autodl-tmp\/m5\/work\/holdout\/06_paper_tables\/Table3_main_quantile.tex",
-  "Table4_ablation_tex":"\/root\/autodl-tmp\/m5\/work\/holdout\/06_paper_tables\/Table4_ablation.tex",
-  "Table5A_data_scarcity_tex":"\/root\/autodl-tmp\/m5\/work\/holdout\/06_paper_tables\/Table5A_data_scarcity.tex",
-  "Table5B_capacity_tex":"\/root\/autodl-tmp\/m5\/work\/holdout\/06_paper_tables\/Table5B_capacity.tex"
+  "combined_rows":"results\\work\\10pct\\06_paper_tables\\combined_rows.csv",
+  "Table2_main_point_csv":"results\\work\\10pct\\06_paper_tables\\Table2_main_point.csv",
+  "Table2_main_point_tex":"results\\work\\10pct\\06_paper_tables\\Table2_main_point.tex",
+  "Table3_main_quantile_tex":"results\\work\\10pct\\06_paper_tables\\Table3_main_quantile.tex",
+  "Table4_ablation_tex":"results\\work\\10pct\\06_paper_tables\\Table4_ablation.tex",
+  "Table5A_data_scarcity_tex":"results\\work\\10pct\\06_paper_tables\\Table5A_data_scarcity.tex",
+  "Table5B_capacity_tex":"results\\work\\10pct\\06_paper_tables\\Table5B_capacity.tex"
 }

@@ -1,0 +1,25 @@
+\begin{table}[H]
+\centering
+\caption{Quantile forecasting results across aggregate levels.}
+\label{tab:main_quantile}
+\begin{threeparttable}
+\begin{tabular}{lcccc}
+\toprule
+Model & state\_dept & store\_cat & store\_dept & Mean \\
+\midrule
+SetTransformer\_Q & \textbf{0.1817} & 0.1973 & \textbf{0.2050} & \textbf{0.1947} \\
+DeepSets\_Q & \underline{0.1865} & \underline{0.1949} & \underline{0.2055} & \underline{0.1956} \\
+M3\_FullSkuTemporalCNN\_Q & 0.1963 & \textbf{0.1911} & 0.2105 & 0.1993 \\
+BottomUpGlobalHistGB & 0.2161 & 0.2202 & 0.2406 & 0.2257 \\
+AggregateElasticNet & 0.2477 & 0.2400 & 0.2519 & 0.2466 \\
+ChildSummaryElasticNet & 0.2690 & 0.2474 & 0.2568 & 0.2577 \\
+AggregateHistGB & 0.2594 & 0.2704 & 0.2620 & 0.2639 \\
+ChildSummaryHistGB & 0.2601 & 0.2717 & 0.2643 & 0.2654 \\
+SeasonalNaive & 0.2661 & 0.2725 & 0.2933 & 0.2773 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\footnotesize \item Entries report WSPL. Lower values indicate better performance. Best results are shown in bold and second-best results are underlined.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

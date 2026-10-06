@@ -1,0 +1,2 @@
+metric_requested,metric_used,analysis_level,block_columns,n_blocks,n_models,friedman_chi2,friedman_p,critical_difference,alpha,ablation_models_included
+wspl,mean_spl,series,"task,agg_id",121,11,969.6018031555222,6.595940337972917e-202,1.269724648621329,0.1,"M0_AggHistOnly,M1_AggHistFutureSummary"

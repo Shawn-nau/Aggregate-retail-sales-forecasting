@@ -13,6 +13,45 @@ def ensure_dir(path: str) -> None:
     os.makedirs(path, exist_ok=True)
 
 
+PAPER_NAME_MAP = {
+    "SetTransformer": "Set Transformer",
+    "SetTransformer_Q": "Set Transformer",
+    "DeepSets": "DeepSets",
+    "DeepSets_Q": "DeepSets",
+    "M3_FullSkuTemporalCNN": "Gated Pooling",
+    "M3_FullSkuTemporalCNN_Q": "Gated Pooling",
+    "M0_AggHistOnly": "AggHistOnly NN",
+    "M1_AggHistFutureSummary": "Child-summary NN",
+    "BottomUpGlobalHistGB": "Bottom-up Global HGB",
+    "AggregateHistGB": "Aggregate HGB",
+    "ChildSummaryHistGB": "Child-summary HGB",
+    "AggregateElasticNet": "Aggregate Elastic Net",
+    "ChildSummaryElasticNet": "Child-summary Elastic Net",
+    "SeasonalNaive": "Aggregate Seasonal Naive",
+    "Reconcilation": "Reconciled HGB",
+}
+
+# Row orders matching the paper's main tables (Tables 1-4).
+MAIN_ORDER_POINT = [
+    "SetTransformer", "DeepSets", "M3_FullSkuTemporalCNN",
+    "BottomUpGlobalHistGB", "M1_AggHistFutureSummary", "M0_AggHistOnly",
+    "ChildSummaryHistGB", "AggregateHistGB", "Reconcilation",
+    "AggregateElasticNet", "ChildSummaryElasticNet", "SeasonalNaive",
+]
+MAIN_ORDER_QUANTILE = [
+    "SetTransformer_Q", "DeepSets_Q", "M3_FullSkuTemporalCNN_Q",
+    "M1_AggHistFutureSummary", "M0_AggHistOnly", "BottomUpGlobalHistGB",
+    "AggregateElasticNet", "ChildSummaryElasticNet",
+    "AggregateHistGB", "ChildSummaryHistGB", "SeasonalNaive",
+]
+
+
+def _prepare_main_table(table: pd.DataFrame, order: List[str]) -> pd.DataFrame:
+    """Reorder rows to the paper's row order and apply paper display names."""
+    idx = [m for m in order if m in table.index] + [m for m in table.index if m not in order]
+    return table.loc[idx].rename(index=PAPER_NAME_MAP)
+
+
 def _fmt(x: float, ndigits: int = 4) -> str:
     if pd.isna(x):
         return ""
@@ -300,8 +339,15 @@ def main() -> None:
     table5a_df = load_csv(args.table5a_csv)
     table5b_df = load_csv(args.table5b_csv)
 
-    # Tables 2 and 3
+    # Tables 2 and 3 (main point / quantile): benchmark + proposed + the two
+    # ablation models M0/M1, as in the paper's Tables 1 and 2.
     combined_rows = merge_rows(benchmark_rows, proposed_rows)
+    if ablation_rows is not None:
+        abl_main = ablation_rows.loc[
+            ablation_rows["model"].isin(["M0_AggHistOnly", "M1_AggHistFutureSummary"])
+        ].copy()
+        if not abl_main.empty:
+            combined_rows = pd.concat([combined_rows, abl_main], axis=0, ignore_index=True)
     combined_rows.to_csv(os.path.join(args.output_dir, "combined_rows.csv"), index=False)
 
     point_summary = summarize_point_rows(combined_rows)
@@ -310,7 +356,7 @@ def main() -> None:
     point_table.to_csv(os.path.join(args.output_dir, "Table2_main_point.csv"))
 
     table2_tex = dataframe_to_latex_main_table(
-        point_table,
+        _prepare_main_table(point_table, MAIN_ORDER_POINT),
         caption="Point forecasting results across aggregate levels.",
         label="tab:main_point",
         metric_name="WRMSSE",
@@ -325,7 +371,7 @@ def main() -> None:
         quant_table = build_main_quantile_table(quant_summary)
         quant_table.to_csv(os.path.join(args.output_dir, "Table3_main_quantile.csv"))
         table3_tex = dataframe_to_latex_main_table(
-            quant_table,
+            _prepare_main_table(quant_table, MAIN_ORDER_QUANTILE),
             caption="Quantile forecasting results across aggregate levels.",
             label="tab:main_quantile",
             metric_name="WSPL",
@@ -342,7 +388,7 @@ def main() -> None:
         table4_df = build_table4_ablation_csv(ablation_rows)
         table4_df.to_csv(os.path.join(args.output_dir, "Table4_ablation.csv"))
         table4_metric = "WSPL" if "wspl" in ablation_rows.columns and ablation_rows["wspl"].notna().any() else "WRMSSE"
-        table4_tex = ablation_table_to_latex(table4_df, metric_name=table4_metric)
+        table4_tex = ablation_table_to_latex(table4_df.rename(index=PAPER_NAME_MAP), metric_name=table4_metric)
     else:
         table4_tex = "% tab:ablation: no ablation rows provided\n"
     write_text(os.path.join(args.output_dir, "Table4_ablation.tex"), table4_tex)

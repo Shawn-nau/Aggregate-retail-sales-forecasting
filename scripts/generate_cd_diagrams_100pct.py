@@ -39,6 +39,7 @@ MODEL_NAME_MAP = {
     "ChildSummaryHistGB": "Child-summary HistGB",
     "ChildSummaryElasticNet": "Child-summary Elastic Net",
     "SeasonalNaive": "Seasonal Naive",
+    "Reconcilation": "Reconcilation",
 }
 
 # Ablation models to keep (the rest are duplicates covered by benchmark/proposed)

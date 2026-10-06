@@ -5,6 +5,8 @@ state_dept,BottomUpGlobalHistGB,0.2112174883328131,,1
 state_dept,ChildSummaryElasticNet,0.2825173475044664,,1
 state_dept,ChildSummaryHistGB,0.2611686355764029,,1
 state_dept,DeepSets_Q,0.1833557840085012,,1
+state_dept,M0_AggHistOnly,0.223849239435046,,1
+state_dept,M1_AggHistFutureSummary,0.2045791452206292,,1
 state_dept,M3_FullSkuTemporalCNN_Q,0.1895561093460251,,1
 state_dept,SeasonalNaive,0.2642714963664924,,1
 state_dept,SetTransformer_Q,0.1856656546446236,,1
@@ -14,6 +16,8 @@ store_cat,BottomUpGlobalHistGB,0.2193815130059662,,1
 store_cat,ChildSummaryElasticNet,0.2748538179892487,,1
 store_cat,ChildSummaryHistGB,0.2729369881944412,,1
 store_cat,DeepSets_Q,0.1809579096417445,,1
+store_cat,M0_AggHistOnly,0.2008111551424143,,1
+store_cat,M1_AggHistFutureSummary,0.2002603598324158,,1
 store_cat,M3_FullSkuTemporalCNN_Q,0.1885873661402208,,1
 store_cat,SeasonalNaive,0.2624581033556121,,1
 store_cat,SetTransformer_Q,0.1897578084448045,,1
@@ -23,6 +27,8 @@ store_dept,BottomUpGlobalHistGB,0.2419489042228064,,1
 store_dept,ChildSummaryElasticNet,0.2748201528274009,,1
 store_dept,ChildSummaryHistGB,0.2772853148491827,,1
 store_dept,DeepSets_Q,0.2015630702124637,,1
+store_dept,M0_AggHistOnly,0.2179512151446035,,1
+store_dept,M1_AggHistFutureSummary,0.2073196640678982,,1
 store_dept,M3_FullSkuTemporalCNN_Q,0.2065491462606513,,1
 store_dept,SeasonalNaive,0.287357444921357,,1
 store_dept,SetTransformer_Q,0.2045599467400994,,1

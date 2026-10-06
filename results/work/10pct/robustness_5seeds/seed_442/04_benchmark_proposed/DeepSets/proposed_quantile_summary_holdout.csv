@@ -1,0 +1,4 @@
+task,model,wspl_mean,wspl_std,n_folds
+state_dept,DeepSets_Q,0.18930004682236365,,1
+store_cat,DeepSets_Q,0.19258507703975933,,1
+store_dept,DeepSets_Q,0.21260006667628178,,1

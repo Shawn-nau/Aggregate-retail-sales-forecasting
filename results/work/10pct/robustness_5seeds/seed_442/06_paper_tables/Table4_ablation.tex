@@ -1,0 +1,22 @@
+\begin{table}[H]
+\centering
+\caption{Ablation study on cross-level representation learning.}
+\label{tab:ablation}
+\begin{threeparttable}
+\begin{tabular}{lcccc}
+\toprule
+Model & state\_dept & store\_cat & store\_dept & Mean \\
+\midrule
+M3\_FullSkuTemporalCNN & \textbf{0.1984} & \textbf{0.1937} & \textbf{0.2145} & \textbf{0.2022} \\
+M1\_AggHistFutureSummary & 0.2314 & \underline{0.2008} & \underline{0.2156} & \underline{0.2159} \\
+M0\_AggHistOnly & 0.2248 & 0.2104 & 0.2218 & 0.2190 \\
+BottomUpGlobalHistGB & \underline{0.2177} & 0.2183 & 0.2424 & 0.2261 \\
+AggregateHistGB & 0.2756 & 0.2687 & 0.2740 & 0.2728 \\
+ChildSummaryHistGB & 0.2875 & 0.2721 & 0.2813 & 0.2803 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\footnotesize \item Entries report WSPL. Lower values indicate better performance. Best results are shown in bold and second-best results are underlined.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

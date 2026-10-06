@@ -1,0 +1,13 @@
+task,model,fold,wrmsse,wape,wspl,base_model
+state_dept,AggregateHistGB,0,0.806929426691429,0.13301832973957062,,
+state_dept,AggregateHistGB,0,,,0.2756138078231697,
+state_dept,ChildSummaryHistGB,0,0.7988801764281845,0.13124562799930573,,
+state_dept,ChildSummaryHistGB,0,,,0.2874822539020553,
+state_dept,BottomUpGlobalHistGB,0,0.7860876326557842,0.1305026412010193,,
+state_dept,BottomUpGlobalHistGB,0,,,0.21771398296002467,
+state_dept,M0_AggHistOnly,0,0.8478502036127225,0.14103942177666487,,M0_AggHistOnly
+state_dept,M0_AggHistOnly,0,,,0.2248415301004926,M0_AggHistOnly
+state_dept,M1_AggHistFutureSummary,0,0.7912584662066591,0.12918889397653074,,M1_AggHistFutureSummary
+state_dept,M1_AggHistFutureSummary,0,,,0.23138697599409883,M1_AggHistFutureSummary
+state_dept,M3_FullSkuTemporalCNN,0,0.7787239634704657,0.12498074016088813,,M3_FullSkuTemporalCNN
+state_dept,M3_FullSkuTemporalCNN,0,,,0.1983655847493029,M3_FullSkuTemporalCNN

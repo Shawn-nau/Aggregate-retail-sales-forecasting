@@ -462,7 +462,7 @@ class BottomUpGlobalBoostingBenchmark(BenchmarkBase):
             self.model_.fit(X, Y)
         return self
 
-    def predict_point(self, samples: Sequence[Dict[str, Any]]) -> np.ndarray:
+    def predict_child(self, samples: Sequence[Dict[str, Any]]) -> List[np.ndarray]:
         if self.model_ is None:
             raise RuntimeError("Model is not fitted.")
         X, child_counts = build_bottom_level_global_features(samples)
@@ -473,12 +473,60 @@ class BottomUpGlobalBoostingBenchmark(BenchmarkBase):
         if self.clip_predictions:
             child_pred = np.maximum(child_pred, 0.0)
 
-        preds = []
+        blocks: List[np.ndarray] = []
         offset = 0
         for n_child in child_counts:
-            block = child_pred[offset: offset + n_child]
-            preds.append(block.sum(axis=0))
+            blocks.append(child_pred[offset: offset + n_child])
             offset += n_child
+        return blocks
+
+    def predict_point(self, samples: Sequence[Dict[str, Any]]) -> np.ndarray:
+        blocks = self.predict_child(samples)
+        return np.vstack([b.sum(axis=0) for b in blocks]).astype(np.float32)
+
+
+class OLSReconciledHistGB(BenchmarkBase):
+    """
+    Standard OLS hierarchical reconciliation of aggregate-level (AggregateHistGB)
+    and bottom-level (BottomUpGlobalHistGB) base forecasts.
+
+    Per sample and horizon step h, the reconciled aggregate forecast is the
+    closed form of the OLS projection S(S'S)^-1 S' y on the two-level hierarchy
+    [top; children], summed back to the aggregate level:
+
+        y_tilde[h] = (N * y_top[h] + sum_i y_child_i[h]) / (N + 1)
+
+    with N the number of child store-SKUs in the sample. If N == 0 the
+    aggregate base forecast is returned unchanged. Point forecasts only.
+    """
+
+    def __init__(self, random_state: int = 42):
+        self.random_state = int(random_state)
+        self.top_model = SklearnMultiOutputBenchmark(
+            feature_builder=build_direct_aggregate_matrix,
+            base_regressor=make_histgb_multioutput(
+                max_depth=6, learning_rate=0.05, max_iter=300, random_state=random_state
+            ),
+        )
+        self.bottom_model = BottomUpGlobalBoostingBenchmark(random_state=random_state)
+
+    def fit(self, train_samples: Sequence[Dict[str, Any]]) -> "OLSReconciledHistGB":
+        self.top_model.fit(train_samples)
+        self.bottom_model.fit(train_samples)
+        return self
+
+    def predict_point(self, samples: Sequence[Dict[str, Any]]) -> np.ndarray:
+        preds: List[np.ndarray] = []
+        for s in samples:
+            y_top = np.asarray(self.top_model.predict_point([s])[0], dtype=np.float32)  # [H]
+            child_blocks = self.bottom_model.predict_child([s])
+            if not child_blocks or child_blocks[0].shape[0] == 0:
+                preds.append(y_top)
+                continue
+            y_child = child_blocks[0]  # [N, H]
+            n_child = int(y_child.shape[0])
+            y_bu = y_child.sum(axis=0)  # [H]
+            preds.append(((n_child * y_top) + y_bu) / float(n_child + 1))
         return np.vstack(preds).astype(np.float32)
 
 
@@ -531,6 +579,8 @@ def build_benchmark_suite(random_state: int = 42) -> Dict[str, BenchmarkBase]:
         ),
         # bottom-up baseline: train globally at the store-SKU level, then aggregate upward
         "BottomUpGlobalHistGB": BottomUpGlobalBoostingBenchmark(random_state=random_state),
+        # OLS-reconciled combination of the aggregate-level and bottom-up HistGB forecasts
+        "Reconcilation": OLSReconciledHistGB(random_state=random_state),
     }
 
 
@@ -804,6 +854,8 @@ def clone_benchmark(benchmark: BenchmarkBase) -> BenchmarkBase:
             feature_builder=benchmark.feature_builder,
             base_regressor=clone(benchmark.base_regressor),
         )
+    if isinstance(benchmark, OLSReconciledHistGB):
+        return OLSReconciledHistGB(random_state=benchmark.random_state)
     raise TypeError(f"Unsupported benchmark type: {type(benchmark)}")
 
 

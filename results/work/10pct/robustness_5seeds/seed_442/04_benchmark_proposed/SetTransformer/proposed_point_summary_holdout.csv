@@ -1,0 +1,4 @@
+task,model,wrmsse_mean,wrmsse_std,wape_mean,wape_std,n_folds
+state_dept,SetTransformer,0.7513940178453059,,0.12487041392669275,,1
+store_cat,SetTransformer,0.7706076622428981,,0.14047575761036793,,1
+store_dept,SetTransformer,0.8455557547066067,,0.1872247700200403,,1

@@ -1,0 +1,10 @@
+task,model,wspl_mean,wspl_std,n_folds
+state_dept,DeepSets_Q,0.1919214943815655,,1
+store_cat,DeepSets_Q,0.2041302848845283,,1
+store_dept,DeepSets_Q,0.2144590947315133,,1
+state_dept,M3_FullSkuTemporalCNN_Q,0.1915108836186107,,1
+store_cat,M3_FullSkuTemporalCNN_Q,0.2150354813582315,,1
+store_dept,M3_FullSkuTemporalCNN_Q,0.2157528881544796,,1
+state_dept,SetTransformer_Q,0.1893384204206259,,1
+store_cat,SetTransformer_Q,0.2046733037249768,,1
+store_dept,SetTransformer_Q,0.2122959167108324,,1
