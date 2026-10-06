@@ -1,0 +1,41 @@
+{
+  "best_params": {
+    "batch_size": 4,
+    "cnn_kernel_size": 3,
+    "cnn_num_blocks": 2,
+    "dropout": 0.03165509662090779,
+    "epochs": 32,
+    "hidden_dim": 128,
+    "lag_windows": [
+      7,
+      14,
+      28,
+      56
+    ],
+    "lr": 0.0004760771731716597,
+    "model_name": "SkuTemporalCNN",
+    "num_heads": 4,
+    "num_inducing_points": 32,
+    "num_sab_layers": 2,
+    "num_seeds": 1,
+    "patience": 8,
+    "recent_window": 14,
+    "search_profile": "full100",
+    "stage1_objective": 0.8656974121706037,
+    "stage2_objective": 0.8341160180012399,
+    "stat_windows": [
+      7,
+      28,
+      56
+    ],
+    "store_sku_sample_frac": 1.0,
+    "trial_number": 10,
+    "use_permreg": false,
+    "weight_decay": 6.542521902792563e-06
+  },
+  "best_params_json": "/root/autodl-tmp/m5/work/100pct/01_tuning/M3_FullSkuTemporalCNN/best_params.json",
+  "final_mean_metric": 0.7191342447055084,
+  "final_retrain_results_csv": "/root/autodl-tmp/m5/work/100pct/01_tuning/M3_FullSkuTemporalCNN/final_retrain_results.csv",
+  "stage1_trials_csv": "/root/autodl-tmp/m5/work/100pct/01_tuning/M3_FullSkuTemporalCNN/stage1_trials.csv",
+  "stage2_confirmation_csv": "/root/autodl-tmp/m5/work/100pct/01_tuning/M3_FullSkuTemporalCNN/stage2_confirmation.csv"
+}

@@ -1,0 +1,4 @@
+task,model,wspl_mean,wspl_std,n_folds
+state_dept,SetTransformer_Q,0.17386005095714024,0.021333494944186605,5
+store_cat,SetTransformer_Q,0.17543433564103336,0.010420712628113279,5
+store_dept,SetTransformer_Q,0.1811209134341097,0.009785898189335793,5

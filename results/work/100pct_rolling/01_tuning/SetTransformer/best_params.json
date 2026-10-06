@@ -1,0 +1,34 @@
+{
+  "batch_size": 4,
+  "cnn_kernel_size": 5,
+  "cnn_num_blocks": 2,
+  "dropout": 0.02676563915781212,
+  "epochs": 32,
+  "hidden_dim": 128,
+  "lag_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "lr": 0.00017104518344723048,
+  "model_name": "SetTransformer",
+  "num_heads": 4,
+  "num_inducing_points": 16,
+  "num_sab_layers": 2,
+  "num_seeds": 1,
+  "patience": 8,
+  "recent_window": 14,
+  "search_profile": "full100",
+  "stage1_objective": 0.8879868267990175,
+  "stage2_objective": 0.8138433780010099,
+  "stat_windows": [
+    7,
+    28,
+    56
+  ],
+  "store_sku_sample_frac": 1.0,
+  "trial_number": 0,
+  "use_permreg": false,
+  "weight_decay": 3.0089668225756894e-06
+}

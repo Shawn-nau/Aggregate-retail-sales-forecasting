@@ -1,0 +1,4 @@
+task,model,wrmsse_mean,wrmsse_std,wape_mean,wape_std,n_folds
+state_dept,Reconcilation,0.7518373465975589,,0.09959156811237335,,1
+store_cat,Reconcilation,0.7381031115562011,,0.10800797492265701,,1
+store_dept,Reconcilation,0.8099110631179061,,0.13178685307502747,,1

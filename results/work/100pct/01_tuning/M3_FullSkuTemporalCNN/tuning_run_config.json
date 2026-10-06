@@ -1,0 +1,177 @@
+{
+  "active_search_space": {
+    "batch_size": [
+      4,
+      8,
+      16
+    ],
+    "cnn_kernel_size": [
+      3,
+      5
+    ],
+    "cnn_num_blocks": [
+      2,
+      3
+    ],
+    "dropout": [
+      0.01,
+      0.08
+    ],
+    "hidden_dim": [
+      64,
+      96,
+      128
+    ],
+    "lr": [
+      0.0001,
+      0.0005
+    ],
+    "num_heads": [
+      2,
+      4
+    ],
+    "num_inducing_points": [
+      16,
+      32
+    ],
+    "num_sab_layers": [
+      1,
+      2
+    ],
+    "num_seeds": [
+      1
+    ],
+    "weight_decay": [
+      1e-06,
+      0.0001
+    ]
+  },
+  "base_fit_cfg": {
+    "batch_log_interval": 0,
+    "batch_size": 16,
+    "epochs": 16,
+    "lr": 0.001,
+    "materialize_datasets": false,
+    "max_grad_norm": 1.0,
+    "num_workers": 0,
+    "patience": 5,
+    "print_every": 999999,
+    "scheduler_factor": 0.5,
+    "scheduler_patience": 2,
+    "use_amp": false,
+    "weight_decay": 0.0001
+  },
+  "cache_dir": "/root/autodl-tmp/m5/cache/100pct",
+  "cfg": {
+    "data_dir": "/root/autodl-tmp/m5/data",
+    "fill_value": 0.0,
+    "gap": 0,
+    "horizon": 28,
+    "internal_valid_size": 3,
+    "keep_only_active_items": false,
+    "min_final_train_origins": 20,
+    "min_train_origins": 20,
+    "sku_universe_mode": "history",
+    "store_sku_sample_frac": 1.0,
+    "store_sku_sample_seed": 42,
+    "t_hist": 56,
+    "tasks": [
+      "store_dept",
+      "store_cat",
+      "state_dept"
+    ],
+    "test_size": 4,
+    "use_calendar_basic": true,
+    "use_events": true,
+    "use_price_change": true,
+    "use_sell_price": true,
+    "use_snap": true,
+    "valid_size": 4
+  },
+  "final_epochs": 32,
+  "final_patience": 8,
+  "lag_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "mode": "holdout",
+  "model_name": "M3_FullSkuTemporalCNN",
+  "monotone_quantiles": true,
+  "quantiles": null,
+  "recent_window": 14,
+  "search_profile": "full100",
+  "seed": 42,
+  "skip_final_stage": false,
+  "stage1": {
+    "epochs": 8,
+    "eval_frac": 1.0,
+    "max_folds": 1,
+    "name": "stage1",
+    "patience": 3,
+    "tasks": [
+      "store_dept"
+    ],
+    "train_frac": 0.3,
+    "valid_frac": 1.0
+  },
+  "stage2": {
+    "epochs": 16,
+    "eval_frac": 1.0,
+    "max_folds": 1,
+    "name": "stage2",
+    "patience": 5,
+    "tasks": [
+      "store_dept",
+      "store_cat",
+      "state_dept"
+    ],
+    "train_frac": 0.8,
+    "valid_frac": 1.0
+  },
+  "stat_windows": [
+    7,
+    28,
+    56
+  ],
+  "tasks": [
+    "store_dept",
+    "store_cat",
+    "state_dept"
+  ],
+  "warm_start_params": {
+    "batch_size": 8,
+    "cnn_kernel_size": 5,
+    "cnn_num_blocks": 2,
+    "dropout": 0.04400665831386537,
+    "epochs": 32,
+    "hidden_dim": 128,
+    "lag_windows": [
+      7,
+      14,
+      28,
+      56
+    ],
+    "lr": 0.00020564626498382444,
+    "model_name": "SkuTemporalCNN",
+    "num_heads": 4,
+    "num_inducing_points": 32,
+    "num_sab_layers": 2,
+    "num_seeds": 1,
+    "patience": 8,
+    "recent_window": 14,
+    "search_profile": "large50",
+    "stage1_objective": 0.9130817067063767,
+    "stage2_objective": 0.8295422691656112,
+    "stat_windows": [
+      7,
+      28,
+      56
+    ],
+    "store_sku_sample_frac": 0.5,
+    "trial_number": 0,
+    "use_permreg": false,
+    "weight_decay": 3.273251909543837e-05
+  }
+}

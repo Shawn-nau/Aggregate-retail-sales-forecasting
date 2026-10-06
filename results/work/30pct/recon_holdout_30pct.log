@@ -1,0 +1,49 @@
+Using cache directory: cache/30pct
+Building/loading cached experiment artifacts...
+[M5-PREP] Loading cached task package for task=store_dept...
+[M5-PREP] Loaded cached task package for task=store_dept | stage 00:00 | total 00:00
+[M5-PREP] Loading cached samples: task=store_dept split=final_train_samples...
+[M5-PREP] Loaded cached samples: task=store_dept split=final_train_samples n=4060 | stage 00:02 | total 00:02
+[M5-PREP] Loading cached samples: task=store_dept split=internal_valid_samples...
+[M5-PREP] Loaded cached samples: task=store_dept split=internal_valid_samples n=210 | stage 00:00 | total 00:00
+[M5-PREP] Loading cached samples: task=store_dept split=test_samples...
+[M5-PREP] Loaded cached samples: task=store_dept split=test_samples n=280 | stage 00:00 | total 00:00
+[M5-PREP] Loading cached task package for task=store_cat...
+[M5-PREP] Loaded cached task package for task=store_cat | stage 00:00 | total 00:00
+[M5-PREP] Loading cached samples: task=store_cat split=final_train_samples...
+[M5-PREP] Loaded cached samples: task=store_cat split=final_train_samples n=1740 | stage 00:02 | total 00:02
+[M5-PREP] Loading cached samples: task=store_cat split=internal_valid_samples...
+[M5-PREP] Loaded cached samples: task=store_cat split=internal_valid_samples n=90 | stage 00:00 | total 00:00
+[M5-PREP] Loading cached samples: task=store_cat split=test_samples...
+[M5-PREP] Loaded cached samples: task=store_cat split=test_samples n=120 | stage 00:00 | total 00:00
+[M5-PREP] Loading cached task package for task=state_dept...
+[M5-PREP] Loaded cached task package for task=state_dept | stage 00:00 | total 00:00
+[M5-PREP] Loading cached samples: task=state_dept split=final_train_samples...
+[M5-PREP] Loaded cached samples: task=state_dept split=final_train_samples n=1218 | stage 00:01 | total 00:01
+[M5-PREP] Loading cached samples: task=state_dept split=internal_valid_samples...
+[M5-PREP] Loaded cached samples: task=state_dept split=internal_valid_samples n=63 | stage 00:00 | total 00:00
+[M5-PREP] Loading cached samples: task=state_dept split=test_samples...
+[M5-PREP] Loaded cached samples: task=state_dept split=test_samples n=84 | stage 00:00 | total 00:00
+Building benchmark suite...
+Running selected benchmark models: ['Reconcilation']
+
+=== Running task: store_dept ===
+
+=== Running task: store_cat ===
+
+=== Running task: state_dept ===
+
+Point summary:
+         task          model  wrmsse_mean  ...  wape_mean  wape_std  n_folds
+0  state_dept  Reconcilation     0.815993  ...   0.114497       NaN        1
+1   store_cat  Reconcilation     0.776126  ...   0.117869       NaN        1
+2  store_dept  Reconcilation     0.817828  ...   0.142450       NaN        1
+
+[3 rows x 7 columns]
+
+Main point table:
+task           state_dept  store_cat  store_dept      Mean
+model                                                     
+Reconcilation    0.815993   0.776126    0.817828  0.803315
+
+Done. Outputs written to: results/work/30pct/03_benchmark_baselines/recon

@@ -1,0 +1,35 @@
+{
+  "best_params": {
+    "batch_size": 16,
+    "cnn_kernel_size": 3,
+    "cnn_num_blocks": 3,
+    "dropout": 0.03900466011060913,
+    "epochs": 24,
+    "hidden_dim": 96,
+    "lag_windows": [
+      7,
+      14,
+      28,
+      56
+    ],
+    "lr": 0.0003051362379613694,
+    "model_name": "DeepSets",
+    "patience": 6,
+    "recent_window": 14,
+    "stage1_objective": 0.9235898400683137,
+    "stage2_objective": 0.8761591609528677,
+    "stat_windows": [
+      7,
+      28,
+      56
+    ],
+    "trial_number": 0,
+    "use_permreg": false,
+    "weight_decay": 1.4347159517201402e-06
+  },
+  "best_params_json": "/root/autodl-tmp/m5/work/holdout/01_tuning/DeepSets/best_params.json",
+  "final_mean_metric": 0.789091146291458,
+  "final_retrain_results_csv": "/root/autodl-tmp/m5/work/holdout/01_tuning/DeepSets/final_retrain_results.csv",
+  "stage1_trials_csv": "/root/autodl-tmp/m5/work/holdout/01_tuning/DeepSets/stage1_trials.csv",
+  "stage2_confirmation_csv": "/root/autodl-tmp/m5/work/holdout/01_tuning/DeepSets/stage2_confirmation.csv"
+}

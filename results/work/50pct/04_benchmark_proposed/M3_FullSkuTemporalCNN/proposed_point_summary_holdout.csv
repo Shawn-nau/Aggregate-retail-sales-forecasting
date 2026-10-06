@@ -1,0 +1,4 @@
+task,model,wrmsse_mean,wrmsse_std,wape_mean,wape_std,n_folds
+state_dept,M3_FullSkuTemporalCNN,0.7070848885687901,,0.09751112620736901,,1
+store_cat,M3_FullSkuTemporalCNN,0.7484627891142712,,0.10898156874499505,,1
+store_dept,M3_FullSkuTemporalCNN,0.7763739311500685,,0.12565547171987856,,1

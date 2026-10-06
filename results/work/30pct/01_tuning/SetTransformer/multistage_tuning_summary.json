@@ -1,0 +1,41 @@
+{
+  "best_params": {
+    "batch_size": 4,
+    "cnn_kernel_size": 5,
+    "cnn_num_blocks": 2,
+    "dropout": 0.02676563915781212,
+    "epochs": 24,
+    "hidden_dim": 160,
+    "lag_windows": [
+      7,
+      14,
+      28,
+      56
+    ],
+    "lr": 0.00017104518344723048,
+    "model_name": "SetTransformer",
+    "num_heads": 4,
+    "num_inducing_points": 16,
+    "num_sab_layers": 2,
+    "num_seeds": 1,
+    "patience": 6,
+    "recent_window": 14,
+    "search_profile": "large30",
+    "stage1_objective": 0.8670698375099346,
+    "stage2_objective": 0.8248814724004189,
+    "stat_windows": [
+      7,
+      28,
+      56
+    ],
+    "store_sku_sample_frac": 0.3,
+    "trial_number": 26,
+    "use_permreg": false,
+    "weight_decay": 3.0089668225756894e-06
+  },
+  "best_params_json": "/root/autodl-tmp/m5/work/30pct/01_tuning/SetTransformer/best_params.json",
+  "final_mean_metric": 0.7636619713241988,
+  "final_retrain_results_csv": "/root/autodl-tmp/m5/work/30pct/01_tuning/SetTransformer/final_retrain_results.csv",
+  "stage1_trials_csv": "/root/autodl-tmp/m5/work/30pct/01_tuning/SetTransformer/stage1_trials.csv",
+  "stage2_confirmation_csv": "/root/autodl-tmp/m5/work/30pct/01_tuning/SetTransformer/stage2_confirmation.csv"
+}

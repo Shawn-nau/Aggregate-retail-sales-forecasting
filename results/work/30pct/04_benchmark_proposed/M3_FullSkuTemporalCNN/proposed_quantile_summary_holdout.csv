@@ -1,0 +1,4 @@
+task,model,wspl_mean,wspl_std,n_folds
+state_dept,M3_FullSkuTemporalCNN_Q,0.18826970330691112,,1
+store_cat,M3_FullSkuTemporalCNN_Q,0.18854713989533448,,1
+store_dept,M3_FullSkuTemporalCNN_Q,0.20734992657316562,,1

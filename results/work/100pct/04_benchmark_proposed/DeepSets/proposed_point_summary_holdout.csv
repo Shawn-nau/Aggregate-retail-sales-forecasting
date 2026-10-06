@@ -1,0 +1,4 @@
+task,model,wrmsse_mean,wrmsse_std,wape_mean,wape_std,n_folds
+state_dept,DeepSets,0.7057295966681272,,0.09269112270828297,,1
+store_cat,DeepSets,0.697405309529525,,0.09685776829969843,,1
+store_dept,DeepSets,0.7729836020929953,,0.11475109461257446,,1

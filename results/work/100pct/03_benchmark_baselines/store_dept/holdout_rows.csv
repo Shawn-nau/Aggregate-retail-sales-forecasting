@@ -1,0 +1,13 @@
+task,model,fold,wrmsse,wape,wspl
+store_dept,SeasonalNaive,0,0.9622480365180819,0.1457349807024002,
+store_dept,SeasonalNaive,0,,,0.29061872717481785
+store_dept,AggregateElasticNet,0,0.9481932125693324,0.14348068833351135,
+store_dept,AggregateElasticNet,0,,,0.2630112332984276
+store_dept,AggregateHistGB,0,0.8049466318860546,0.1222057044506073,
+store_dept,AggregateHistGB,0,,,0.27677362073078593
+store_dept,ChildSummaryElasticNet,0,1.0088660503055262,0.15139935910701752,
+store_dept,ChildSummaryElasticNet,0,,,0.27812852437925795
+store_dept,ChildSummaryHistGB,0,0.800717912931436,0.12108509242534637,
+store_dept,ChildSummaryHistGB,0,,,0.28465059522712216
+store_dept,BottomUpGlobalHistGB,0,0.8080520691325126,0.12310890108346939,
+store_dept,BottomUpGlobalHistGB,0,,,0.24064832354293805

@@ -1,0 +1,2 @@
+task,model,fold,wrmsse,wape
+store_cat,Reconcilation,0,0.7761257557241605,0.11786862462759018

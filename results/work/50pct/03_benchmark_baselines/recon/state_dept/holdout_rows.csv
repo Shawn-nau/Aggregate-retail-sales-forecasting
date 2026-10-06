@@ -1,0 +1,2 @@
+task,model,fold,wrmsse,wape
+state_dept,Reconcilation,0,0.7518373465975589,0.09959156811237335

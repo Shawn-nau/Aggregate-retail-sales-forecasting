@@ -1,0 +1,182 @@
+Using cache directory: cache/100pct_rolling
+[M5-PREP] Building item-store panel from raw CSV tables...
+[M5-PREP] Built and cached panel with shape=(59181090, 26) | stage 03:24 | total 03:24
+[M5-PREP] Building fast task arrays for task=store_dept...
+[M5-PREP] task=store_dept aggregate tensor build: 1/70 (  1.4%) | elapsed 01:00 | ETA 1:08:42
+[M5-PREP] task=store_dept aggregate tensor build: 34/70 ( 48.6%) | elapsed 01:05 | ETA 01:09
+[M5-PREP] task=store_dept aggregate tensor build: 67/70 ( 95.7%) | elapsed 01:10 | ETA 00:03
+[M5-PREP] task=store_dept aggregate tensor build: 70/70 (100.0%) | elapsed 01:10 | ETA 00:00
+[M5-PREP] Fast task arrays ready for task=store_dept with 70 aggregates | stage 01:10 | total 01:10
+[M5-PREP] task=store_dept split=final_train_samples started...
+[M5-PREP] task=store_dept split=final_train_samples: 4060/4060 (100.0%) | elapsed 00:02 | ETA 00:00
+[M5-PREP] task=store_dept split=final_train_samples finished with 4060 samples | stage 00:02 | total 00:02
+[M5-PREP] task=store_dept split=internal_valid_samples started...
+[M5-PREP] task=store_dept split=internal_valid_samples: 210/210 (100.0%) | elapsed 00:00 | ETA 00:00
+[M5-PREP] task=store_dept split=internal_valid_samples finished with 210 samples | stage 00:00 | total 00:00
+[M5-PREP] task=store_dept split=test_samples started...
+[M5-PREP] task=store_dept split=test_samples: 280/280 (100.0%) | elapsed 00:00 | ETA 00:00
+[M5-PREP] task=store_dept split=test_samples finished with 280 samples | stage 00:00 | total 00:00
+[M5-PREP] task=store_dept split=rolling_fold_1_train_samples started...
+[M5-PREP] task=store_dept split=rolling_fold_1_train_samples: 3290/3290 (100.0%) | elapsed 00:02 | ETA 00:00
+[M5-PREP] task=store_dept split=rolling_fold_1_train_samples finished with 3290 samples | stage 00:02 | total 00:02
+[M5-PREP] task=store_dept split=rolling_fold_1_valid_samples started...
+[M5-PREP] task=store_dept split=rolling_fold_1_valid_samples: 280/280 (100.0%) | elapsed 00:00 | ETA 00:00
+[M5-PREP] task=store_dept split=rolling_fold_1_valid_samples finished with 280 samples | stage 00:00 | total 00:00
+[M5-PREP] task=store_dept split=rolling_fold_2_train_samples started...
+[M5-PREP] task=store_dept split=rolling_fold_2_train_samples: 3430/3430 (100.0%) | elapsed 00:02 | ETA 00:00
+[M5-PREP] task=store_dept split=rolling_fold_2_train_samples finished with 3430 samples | stage 00:02 | total 00:02
+[M5-PREP] task=store_dept split=rolling_fold_2_valid_samples started...
+[M5-PREP] task=store_dept split=rolling_fold_2_valid_samples: 280/280 (100.0%) | elapsed 00:00 | ETA 00:00
+[M5-PREP] task=store_dept split=rolling_fold_2_valid_samples finished with 280 samples | stage 00:00 | total 00:00
+[M5-PREP] task=store_dept split=rolling_fold_3_train_samples started...
+[M5-PREP] task=store_dept split=rolling_fold_3_train_samples: 3570/3570 (100.0%) | elapsed 00:02 | ETA 00:00
+[M5-PREP] task=store_dept split=rolling_fold_3_train_samples finished with 3570 samples | stage 00:02 | total 00:02
+[M5-PREP] task=store_dept split=rolling_fold_3_valid_samples started...
+[M5-PREP] task=store_dept split=rolling_fold_3_valid_samples: 280/280 (100.0%) | elapsed 00:00 | ETA 00:00
+[M5-PREP] task=store_dept split=rolling_fold_3_valid_samples finished with 280 samples | stage 00:00 | total 00:00
+[M5-PREP] task=store_dept split=rolling_fold_4_train_samples started...
+[M5-PREP] task=store_dept split=rolling_fold_4_train_samples: 3710/3710 (100.0%) | elapsed 00:02 | ETA 00:00
+[M5-PREP] task=store_dept split=rolling_fold_4_train_samples finished with 3710 samples | stage 00:02 | total 00:02
+[M5-PREP] task=store_dept split=rolling_fold_4_valid_samples started...
+[M5-PREP] task=store_dept split=rolling_fold_4_valid_samples: 280/280 (100.0%) | elapsed 00:00 | ETA 00:00
+[M5-PREP] task=store_dept split=rolling_fold_4_valid_samples finished with 280 samples | stage 00:00 | total 00:00
+[M5-PREP] task=store_dept split=rolling_fold_5_train_samples started...
+[M5-PREP] task=store_dept split=rolling_fold_5_train_samples: 3850/3850 (100.0%) | elapsed 00:02 | ETA 00:00
+[M5-PREP] task=store_dept split=rolling_fold_5_train_samples finished with 3850 samples | stage 00:02 | total 00:02
+[M5-PREP] task=store_dept split=rolling_fold_5_valid_samples started...
+[M5-PREP] task=store_dept split=rolling_fold_5_valid_samples: 280/280 (100.0%) | elapsed 00:00 | ETA 00:00
+[M5-PREP] task=store_dept split=rolling_fold_5_valid_samples finished with 280 samples | stage 00:00 | total 00:00
+[M5-PREP] Loading cached item-store panel...
+[M5-PREP] Loaded cached panel with shape=(59181090, 26) | stage 01:11 | total 01:11
+[M5-PREP] Building fast task arrays for task=store_cat...
+[M5-PREP] task=store_cat aggregate tensor build: 1/30 (  3.3%) | elapsed 01:06 | ETA 31:53
+[M5-PREP] task=store_cat aggregate tensor build: 16/30 ( 53.3%) | elapsed 01:11 | ETA 01:02
+[M5-PREP] task=store_cat aggregate tensor build: 30/30 (100.0%) | elapsed 01:16 | ETA 00:00
+[M5-PREP] Fast task arrays ready for task=store_cat with 30 aggregates | stage 01:16 | total 01:16
+[M5-PREP] task=store_cat split=final_train_samples started...
+[M5-PREP] task=store_cat split=final_train_samples: 1740/1740 (100.0%) | elapsed 00:02 | ETA 00:00
+[M5-PREP] task=store_cat split=final_train_samples finished with 1740 samples | stage 00:02 | total 00:02
+[M5-PREP] task=store_cat split=internal_valid_samples started...
+[M5-PREP] task=store_cat split=internal_valid_samples: 90/90 (100.0%) | elapsed 00:00 | ETA 00:00
+[M5-PREP] task=store_cat split=internal_valid_samples finished with 90 samples | stage 00:00 | total 00:00
+[M5-PREP] task=store_cat split=test_samples started...
+[M5-PREP] task=store_cat split=test_samples: 120/120 (100.0%) | elapsed 00:00 | ETA 00:00
+[M5-PREP] task=store_cat split=test_samples finished with 120 samples | stage 00:00 | total 00:00
+[M5-PREP] task=store_cat split=rolling_fold_1_train_samples started...
+[M5-PREP] task=store_cat split=rolling_fold_1_train_samples: 1224/1410 ( 86.8%) | elapsed 00:08 | ETA 00:01
+[M5-PREP] task=store_cat split=rolling_fold_1_train_samples: 1410/1410 (100.0%) | elapsed 00:08 | ETA 00:00
+[M5-PREP] task=store_cat split=rolling_fold_1_train_samples finished with 1410 samples | stage 00:08 | total 00:08
+[M5-PREP] task=store_cat split=rolling_fold_1_valid_samples started...
+[M5-PREP] task=store_cat split=rolling_fold_1_valid_samples: 120/120 (100.0%) | elapsed 00:00 | ETA 00:00
+[M5-PREP] task=store_cat split=rolling_fold_1_valid_samples finished with 120 samples | stage 00:00 | total 00:00
+[M5-PREP] task=store_cat split=rolling_fold_2_train_samples started...
+[M5-PREP] task=store_cat split=rolling_fold_2_train_samples: 1470/1470 (100.0%) | elapsed 00:01 | ETA 00:00
+[M5-PREP] task=store_cat split=rolling_fold_2_train_samples finished with 1470 samples | stage 00:01 | total 00:01
+[M5-PREP] task=store_cat split=rolling_fold_2_valid_samples started...
+[M5-PREP] task=store_cat split=rolling_fold_2_valid_samples: 120/120 (100.0%) | elapsed 00:00 | ETA 00:00
+[M5-PREP] task=store_cat split=rolling_fold_2_valid_samples finished with 120 samples | stage 00:00 | total 00:00
+[M5-PREP] task=store_cat split=rolling_fold_3_train_samples started...
+[M5-PREP] task=store_cat split=rolling_fold_3_train_samples: 1530/1530 (100.0%) | elapsed 00:02 | ETA 00:00
+[M5-PREP] task=store_cat split=rolling_fold_3_train_samples finished with 1530 samples | stage 00:02 | total 00:02
+[M5-PREP] task=store_cat split=rolling_fold_3_valid_samples started...
+[M5-PREP] task=store_cat split=rolling_fold_3_valid_samples: 120/120 (100.0%) | elapsed 00:00 | ETA 00:00
+[M5-PREP] task=store_cat split=rolling_fold_3_valid_samples finished with 120 samples | stage 00:00 | total 00:00
+[M5-PREP] task=store_cat split=rolling_fold_4_train_samples started...
+[M5-PREP] task=store_cat split=rolling_fold_4_train_samples: 1590/1590 (100.0%) | elapsed 00:02 | ETA 00:00
+[M5-PREP] task=store_cat split=rolling_fold_4_train_samples finished with 1590 samples | stage 00:02 | total 00:02
+[M5-PREP] task=store_cat split=rolling_fold_4_valid_samples started...
+[M5-PREP] task=store_cat split=rolling_fold_4_valid_samples: 120/120 (100.0%) | elapsed 00:00 | ETA 00:00
+[M5-PREP] task=store_cat split=rolling_fold_4_valid_samples finished with 120 samples | stage 00:00 | total 00:00
+[M5-PREP] task=store_cat split=rolling_fold_5_train_samples started...
+[M5-PREP] task=store_cat split=rolling_fold_5_train_samples: 1650/1650 (100.0%) | elapsed 00:02 | ETA 00:00
+[M5-PREP] task=store_cat split=rolling_fold_5_train_samples finished with 1650 samples | stage 00:02 | total 00:02
+[M5-PREP] task=store_cat split=rolling_fold_5_valid_samples started...
+[M5-PREP] task=store_cat split=rolling_fold_5_valid_samples: 120/120 (100.0%) | elapsed 00:00 | ETA 00:00
+[M5-PREP] task=store_cat split=rolling_fold_5_valid_samples finished with 120 samples | stage 00:00 | total 00:00
+[M5-PREP] Loading cached item-store panel...
+[M5-PREP] Loaded cached panel with shape=(59181090, 26) | stage 00:54 | total 00:54
+[M5-PREP] Building fast task arrays for task=state_dept...
+[M5-PREP] task=state_dept aggregate tensor build: 1/21 (  4.8%) | elapsed 01:24 | ETA 28:08
+[M5-PREP] task=state_dept aggregate tensor build: 10/21 ( 47.6%) | elapsed 01:30 | ETA 01:38
+[M5-PREP] task=state_dept aggregate tensor build: 21/21 (100.0%) | elapsed 01:34 | ETA 00:00
+[M5-PREP] Fast task arrays ready for task=state_dept with 21 aggregates | stage 01:34 | total 01:34
+[M5-PREP] task=state_dept split=final_train_samples started...
+[M5-PREP] task=state_dept split=final_train_samples: 1218/1218 (100.0%) | elapsed 00:02 | ETA 00:00
+[M5-PREP] task=state_dept split=final_train_samples finished with 1218 samples | stage 00:02 | total 00:02
+[M5-PREP] task=state_dept split=internal_valid_samples started...
+[M5-PREP] task=state_dept split=internal_valid_samples: 63/63 (100.0%) | elapsed 00:00 | ETA 00:00
+[M5-PREP] task=state_dept split=internal_valid_samples finished with 63 samples | stage 00:00 | total 00:00
+[M5-PREP] task=state_dept split=test_samples started...
+[M5-PREP] task=state_dept split=test_samples: 84/84 (100.0%) | elapsed 00:00 | ETA 00:00
+[M5-PREP] task=state_dept split=test_samples finished with 84 samples | stage 00:00 | total 00:00
+[M5-PREP] task=state_dept split=rolling_fold_1_train_samples started...
+[M5-PREP] task=state_dept split=rolling_fold_1_train_samples: 987/987 (100.0%) | elapsed 00:02 | ETA 00:00
+[M5-PREP] task=state_dept split=rolling_fold_1_train_samples finished with 987 samples | stage 00:02 | total 00:02
+[M5-PREP] task=state_dept split=rolling_fold_1_valid_samples started...
+[M5-PREP] task=state_dept split=rolling_fold_1_valid_samples: 84/84 (100.0%) | elapsed 00:00 | ETA 00:00
+[M5-PREP] task=state_dept split=rolling_fold_1_valid_samples finished with 84 samples | stage 00:00 | total 00:00
+[M5-PREP] task=state_dept split=rolling_fold_2_train_samples started...
+[M5-PREP] task=state_dept split=rolling_fold_2_train_samples: 1029/1029 (100.0%) | elapsed 00:01 | ETA 00:00
+[M5-PREP] task=state_dept split=rolling_fold_2_train_samples finished with 1029 samples | stage 00:01 | total 00:01
+[M5-PREP] task=state_dept split=rolling_fold_2_valid_samples started...
+[M5-PREP] task=state_dept split=rolling_fold_2_valid_samples: 84/84 (100.0%) | elapsed 00:00 | ETA 00:00
+[M5-PREP] task=state_dept split=rolling_fold_2_valid_samples finished with 84 samples | stage 00:00 | total 00:00
+[M5-PREP] task=state_dept split=rolling_fold_3_train_samples started...
+[M5-PREP] task=state_dept split=rolling_fold_3_train_samples: 1071/1071 (100.0%) | elapsed 00:02 | ETA 00:00
+[M5-PREP] task=state_dept split=rolling_fold_3_train_samples finished with 1071 samples | stage 00:02 | total 00:02
+[M5-PREP] task=state_dept split=rolling_fold_3_valid_samples started...
+[M5-PREP] task=state_dept split=rolling_fold_3_valid_samples: 84/84 (100.0%) | elapsed 00:00 | ETA 00:00
+[M5-PREP] task=state_dept split=rolling_fold_3_valid_samples finished with 84 samples | stage 00:00 | total 00:00
+[M5-PREP] task=state_dept split=rolling_fold_4_train_samples started...
+[M5-PREP] task=state_dept split=rolling_fold_4_train_samples: 1113/1113 (100.0%) | elapsed 00:02 | ETA 00:00
+[M5-PREP] task=state_dept split=rolling_fold_4_train_samples finished with 1113 samples | stage 00:02 | total 00:02
+[M5-PREP] task=state_dept split=rolling_fold_4_valid_samples started...
+[M5-PREP] task=state_dept split=rolling_fold_4_valid_samples: 84/84 (100.0%) | elapsed 00:00 | ETA 00:00
+[M5-PREP] task=state_dept split=rolling_fold_4_valid_samples finished with 84 samples | stage 00:00 | total 00:00
+[M5-PREP] task=state_dept split=rolling_fold_5_train_samples started...
+[M5-PREP] task=state_dept split=rolling_fold_5_train_samples: 1155/1155 (100.0%) | elapsed 00:04 | ETA 00:00
+[M5-PREP] task=state_dept split=rolling_fold_5_train_samples finished with 1155 samples | stage 00:04 | total 00:04
+[M5-PREP] task=state_dept split=rolling_fold_5_valid_samples started...
+[M5-PREP] task=state_dept split=rolling_fold_5_valid_samples: 84/84 (100.0%) | elapsed 00:00 | ETA 00:00
+[M5-PREP] task=state_dept split=rolling_fold_5_valid_samples finished with 84 samples | stage 00:00 | total 00:00
+====================================================================================================
+M5 EXPERIMENT SUMMARY
+====================================================================================================
+
+Task: store_dept
+  # aggregate units: 70
+  # child sku ids:    30490
+  # time points:      1941
+  sampled store-SKUs: frac=1.0 seed=42
+  hist features:      ['sell_price', 'price_change_ratio', 'snap_flag', 'event_flag', 'wday', 'month']
+  future features:    ['sell_price', 'price_change_ratio', 'snap_flag', 'event_flag', 'wday', 'month']
+  final train samples: 4060
+  internal valid samples: 210
+  test samples: 280
+  rolling folds: 5
+
+Task: store_cat
+  # aggregate units: 30
+  # child sku ids:    30490
+  # time points:      1941
+  sampled store-SKUs: frac=1.0 seed=42
+  hist features:      ['sell_price', 'price_change_ratio', 'snap_flag', 'event_flag', 'wday', 'month']
+  future features:    ['sell_price', 'price_change_ratio', 'snap_flag', 'event_flag', 'wday', 'month']
+  final train samples: 1740
+  internal valid samples: 90
+  test samples: 120
+  rolling folds: 5
+
+Task: state_dept
+  # aggregate units: 21
+  # child sku ids:    30490
+  # time points:      1941
+  sampled store-SKUs: frac=1.0 seed=42
+  hist features:      ['sell_price', 'price_change_ratio', 'snap_flag', 'event_flag', 'wday', 'month']
+  future features:    ['sell_price', 'price_change_ratio', 'snap_flag', 'event_flag', 'wday', 'month']
+  final train samples: 1218
+  internal valid samples: 63
+  test samples: 84
+  rolling folds: 5
+
+Cache ready at: cache/100pct_rolling

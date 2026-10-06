@@ -1,0 +1,41 @@
+{
+  "best_params": {
+    "batch_size": 8,
+    "cnn_kernel_size": 5,
+    "cnn_num_blocks": 2,
+    "dropout": 0.030781285623524793,
+    "epochs": 24,
+    "hidden_dim": 128,
+    "lag_windows": [
+      7,
+      14,
+      28,
+      56
+    ],
+    "lr": 0.0001967569263914974,
+    "model_name": "DeepSets",
+    "num_heads": 4,
+    "num_inducing_points": 32,
+    "num_sab_layers": 2,
+    "num_seeds": 1,
+    "patience": 6,
+    "recent_window": 14,
+    "search_profile": "large30",
+    "stage1_objective": 0.8830851327840437,
+    "stage2_objective": 0.8267925951533687,
+    "stat_windows": [
+      7,
+      28,
+      56
+    ],
+    "store_sku_sample_frac": 0.3,
+    "trial_number": 18,
+    "use_permreg": false,
+    "weight_decay": 5.2396195076096055e-05
+  },
+  "best_params_json": "/root/autodl-tmp/m5/work/30pct/01_tuning/DeepSets/best_params.json",
+  "final_mean_metric": 0.79481424917616,
+  "final_retrain_results_csv": "/root/autodl-tmp/m5/work/30pct/01_tuning/DeepSets/final_retrain_results.csv",
+  "stage1_trials_csv": "/root/autodl-tmp/m5/work/30pct/01_tuning/DeepSets/stage1_trials.csv",
+  "stage2_confirmation_csv": "/root/autodl-tmp/m5/work/30pct/01_tuning/DeepSets/stage2_confirmation.csv"
+}

@@ -1,0 +1,4 @@
+task,model,wrmsse_mean,wrmsse_std,wape_mean,wape_std,n_folds
+store_dept,DeepSets,0.8949077903486486,,0.2169684243255309,,1
+store_dept,M3_FullSkuTemporalCNN,0.9300348339410797,,0.21268601876040397,,1
+store_dept,SetTransformer,0.839929855305694,,0.18536723795011634,,1

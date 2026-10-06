@@ -1,0 +1,28 @@
+{
+  "batch_size": 16,
+  "cnn_kernel_size": 3,
+  "cnn_num_blocks": 4,
+  "dropout": 0.04557699256751578,
+  "epochs": 24,
+  "hidden_dim": 96,
+  "lag_windows": [
+    7,
+    14,
+    28,
+    56
+  ],
+  "lr": 0.0005058751296905538,
+  "model_name": "SkuTemporalCNN",
+  "patience": 6,
+  "recent_window": 14,
+  "stage1_objective": 0.9109422649947764,
+  "stage2_objective": 0.8836537165301385,
+  "stat_windows": [
+    7,
+    28,
+    56
+  ],
+  "trial_number": 40,
+  "use_permreg": false,
+  "weight_decay": 2.2687005736627434e-06
+}
