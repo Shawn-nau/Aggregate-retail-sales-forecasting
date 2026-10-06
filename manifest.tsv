@@ -1,0 +1,24 @@
+package_path	size_bytes	source_path
+data/m5/sales_train_evaluation.csv	121736518	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\data\m5\sales_train_evaluation.csv
+data/m5/sales_train_validation.csv	120007726	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\data\m5\sales_train_validation.csv
+data/m5/calendar.csv	103469	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\data\m5\calendar.csv
+data/m5/sell_prices.csv	203395785	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\data\m5\sell_prices.csv
+code/scripts	440442	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\scripts
+code/tests	2869	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\tests
+code/best_params_all_models.json	1858	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\best_params_all_models.json
+code/appendix_rolling_folds_point.tex	6591	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\appendix_rolling_folds_point.tex
+code/appendix_rolling_folds_quantile.tex	6107	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\appendix_rolling_folds_quantile.tex
+code/docs/time_origins.md	2325	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\docs\time_origins.md
+code/README.md	22018	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\README.md
+code/.gitignore	1183	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\.gitignore
+results/work/100pct	8526441	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\results\work\100pct
+results/work/100pct_rolling	33957415	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\results\work\100pct_rolling
+results/work/10pct	44499307	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\results\work\10pct
+results/work/10pct_rolling	37606328	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\results\work\10pct_rolling
+results/work/30pct	9722620	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\results\work\30pct
+results/work/50pct	8331242	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\results\work\50pct
+results/work/figures	1685612	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\results\work\figures
+README.md	34523	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\packaging\package_files\README.md
+LICENSE	1082	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\packaging\package_files\LICENSE
+environment/environment.yml	763	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\packaging\package_files\environment.yml
+environment/requirements.txt	394	D:\agentic\aggregate forecasting reproducibility\aggerate last\aggerate last\scripts_modified_checked_readme\packaging\package_files\requirements.txt
